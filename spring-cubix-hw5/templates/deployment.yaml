@@ -64,13 +64,14 @@ spec:
             httpGet:
               path: /actuator/health/liveness
               port: management
+            initialDelaySeconds: 30
             failureThreshold: 2
             periodSeconds: 10
           readinessProbe:
             httpGet:
               path: /actuator/health/readiness
               port: management
-            initialDelaySeconds: 0
+            initialDelaySeconds: 30
             failureThreshold: 1
             periodSeconds: 5  
       {{- with .Values.nodeSelector }}
