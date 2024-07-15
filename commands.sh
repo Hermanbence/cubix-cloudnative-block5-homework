@@ -12,6 +12,8 @@ helm install native . -f C:\Users\BencePC\Documents\GitHub\cubix-cloudnative-blo
 helm upgrade native . -f C:\Users\BencePC\Documents\GitHub\cubix-cloudnative-block5-homework\native.yaml -n cubix-hw5
 helm uninstall native -n cubix-hw5
 
+kubectl create ns cubix-hw5
+kubectl delete ns cubix-hw5
 kubectl get all -n cubix-hw5  
 kubectl get ingress -n cubix-hw5  
 helm list --all-namespaces
